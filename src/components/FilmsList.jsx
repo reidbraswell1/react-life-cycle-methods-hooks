@@ -6,12 +6,14 @@ function FilmsList(props) {
     
     console.log(`---Begin Function FilmsList()---`);
 
-    const [ list, setList] = React.useState([]);
-    const [ errorText, setErrorText ] = React.useState("");
+    const [ list, setList] = useState([]);
+    const [ errorText, setErrorText ] = useState("");
 
-    React.useEffect(() => {
+    useEffect(() => {
         console.log(`---Begin useEffect()---`);
-        return () => getFilms()
+        return function () {
+            getFilms();
+        }
     }, []);
 
     function getFilms() {
