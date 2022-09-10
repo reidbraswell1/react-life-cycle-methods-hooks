@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import './App.css';
 import FilmsList from "./components/FilmsList.jsx"
 
@@ -6,8 +7,8 @@ function App(props) {
 
     console.log(`---Begin Function App()---`);
 
-    const [ list, setList ] = React.useState(["ready", "set", "GO"]);
-    const [ text, setText ] = React.useState("");
+    const [ list, setList ] = useState(["ready", "set", "GO"]);
+    const [ text, setText ] = useState("");
     const [ errorTest, setErrorTest ] = React.useState(false);
 
     return(<div className="container">
