@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import './App.css';
-import FilmsList from "./components/FilmsList.jsx"
+import FilmsList from "./components/FilmsList.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App(props) {
 
@@ -13,7 +14,7 @@ function App(props) {
 
     return(<div className="container">
             <div className="row">
-              <div class="col-6 text-center my-center mt-3">
+              <div class="col-7 text-center my-center mt-3">
                 <h1>React Life Cycle Methods Hooks</h1>
               </div>
             </div>
@@ -23,12 +24,7 @@ function App(props) {
                 <FilmsList errTest={errorTest}></FilmsList>
               </div>
             </div>
-            <div className="row mt-3">
-              <footer className="col-5 my-center footer">
-                <p>Life Cycle Methods Exercise 9/22</p>
-              </footer>
-            </div>
-
+            <Footer></Footer>
           </div>)
   }
 export default App;
