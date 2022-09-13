@@ -32,21 +32,19 @@
 1. Specify `props` as the parameter to the `App` function
 
 ## Exercise 6: State Hook in App#
-1. Import and destructure useState from the react package
+1. Import and destructure `useState` from the `react` package
 1. Remove the constructor
-1. Add a declaration for list and setList that will be destructured from an array that is returned from calling useState(["ready", "set", "GO"])
-1. Add a declaration for text and setText that will be destructured from an array that is returned from calling useState("")
-1. Update the return statement to map over list instead of this.state.list
-1. Update the return statement's input value to be text instead of this.state.text
-1. Update the return statement's input onChange to call setText instead of this.setState
+1. Add a declaration for `list` and `setList` that will be destructured from an array that is returned from calling `useState(["ready", "set", "GO"])`
+1. Add a declaration for `text` and `setText` that will be destructured from an array that is returned from calling `useState("")`
+1. Update the return statement to map over `list` instead of `this.state.list`
+1. Update the return statement's `input` value to be `text` instead of `this.state.text`
+1. Update the return statement's input `onChange` to call `setText` instead of `this.setState`
 
 ## Exercise 7: Update onSubmit
-1. onSubmit is currently a method. Add the function keyword to make it a function value within this component scope
+1. `onSubmit` is currently a method. Add the `function` keyword to make it a function value within this component scope
 1. Update the function to:
-use list instead of this.state.list
-use text instead of this.state.text
-use setList instead of this.setState
-1. Update the return statement's form onSubmit to be onSubmit instead of this.onSubmit
-Helpful Links#
-If you feel stuck, or would like to see the finished code for this exercise to check your work, check out:
+    * use `list` instead of `this.state.list`
+    * use `text` instead of `this.state.text`
+    * use `setList` instead of `this.setState`
+1. Update the return statement's form `onSubmit` to be `onSubmit` instead of `this.onSubmit`
 
