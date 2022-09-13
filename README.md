@@ -1,5 +1,8 @@
 # Exercise: React Hooks
 
+![React Life Cycle Methods Hooks](/ReactLifeCycleMethodsHooks.png?raw=true "React Life Cycle Methods Hooks")
+
+
 ## Exercise 1: FilmsList from Class to Function
 1. Change the FilmsList from a class to a function
 1. Remove the render method surround the return `<ul>...</ul>` statement
