@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Exercise: React Hooks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Exercise 1: FilmsList from Class to Function
+1. Change the FilmsList from a class to a function
+1. Remove the render method surround the return `<ul>...</ul>` statement
+    * we'll still be using the returned JSX, so be sure to keep that
+1. Specify props as the parameter to the FilmsList function
 
-## Available Scripts
+## Exercise 2: State Hook in FilmsList
+1. Import and destructure `useState` from the `react` package
+1. Remove the constructor
+1. Add a declaration for `list` and `setList` that will be destructured from an array that is returned from calling `useState([])`
+1. Update the return statement to map over `list` instead of `this.state.list`
 
-In the project directory, you can run:
+## Exercise 3: Update getFilms
+1. `getFilms` is currently a method. Add the `function` keyword to make it a function value within this component scope
+1. Update the promise consumer that updates the list state
+    * Change `this.setState()` to `setList`
+    * Be sure to only pass in the `films` data, no longer `{ list: films }`
 
-### `npm start`
+## Exercise 4: Effect Hook in FilmsList
+1. Import and destructure `useEffect` from the `react` package
+1. Remove the `componentDidMount` method
+1. Call `useEffect`
+    * first, pass in a callback function that will call `getFilms`
+    * second, pass in an empty dependency array
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Exercise 5: App from Class to Function#
+1. Change the `App` from a class to a function
+1. Remove the `render` method surround the `return ...` statement
+    * we'll still be using the returned JSX, so be sure to keep that
+1. Specify `props` as the parameter to the `App` function
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Exercise 6: State Hook in App#
+1. Import and destructure useState from the react package
+1. Remove the constructor
+1. Add a declaration for list and setList that will be destructured from an array that is returned from calling useState(["ready", "set", "GO"])
+1. Add a declaration for text and setText that will be destructured from an array that is returned from calling useState("")
+1. Update the return statement to map over list instead of this.state.list
+1. Update the return statement's input value to be text instead of this.state.text
+1. Update the return statement's input onChange to call setText instead of this.setState
 
-### `npm test`
+## Exercise 7: Update onSubmit
+1. onSubmit is currently a method. Add the function keyword to make it a function value within this component scope
+1. Update the function to:
+use list instead of this.state.list
+use text instead of this.state.text
+use setList instead of this.setState
+1. Update the return statement's form onSubmit to be onSubmit instead of this.onSubmit
+Helpful Links#
+If you feel stuck, or would like to see the finished code for this exercise to check your work, check out:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
